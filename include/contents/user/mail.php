@@ -64,19 +64,19 @@ if ( empty($_POST['bet']) OR empty($_POST['email']) OR empty($_POST['txt']) OR $
 <div class="form-group">
     <label class="col-sm-2 control-label">Betreff</label>
     <div class="col-sm-10">
-      <input type="text" name="bet" value="<?php echo $_POST['bet']; ?>" placeholder="Betreff">
+      <input type="text" name="bet" class="form-control" value="<?php echo $_POST['bet']; ?>" placeholder="Betreff">
     </div>
   </div>
 <div class="form-group">
     <label class="col-sm-2 control-label">Deine eMail</label>
     <div class="col-sm-10">
-      <input type="text" name="email" value="<?php echo $_POST['email']; ?>" placeholder="Deine email">
+      <input type="text" name="email" class="form-control" value="<?php echo $_POST['email']; ?>" placeholder="Deine email">
     </div>
   </div>
 <div class="form-group">
     <label class="col-sm-2 control-label">Nachricht</label>
     <div class="col-sm-10">
-      <textarea cols="40" rows="10" name="txt" placeholder="Nachricht"><?php echo $_POST['txt']; ?></textarea>
+      <textarea cols="40" rows="10" class="form-control" name="txt" placeholder="Nachricht"><?php echo $_POST['txt']; ?></textarea>
     </div>
   </div>
 <div class="form-group">
