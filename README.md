@@ -1,5 +1,4 @@
-ilch-bootstrap
+ilch meets bootstrap
 ==============
 
-Ilch an Bootstraps angepasst
-Copyrigth by Maretz
+Das Ilch CMS Version 1.1p Frontend angepasst an Bootstrap
