@@ -21,18 +21,18 @@ WHERE ((".$_SESSION['authright']." <= b.view AND b.view < 1)
 	 OR -9 >= ".$_SESSION['authright'].")
 ORDER BY c.time DESC
 LIMIT 0,4";
-echo '<div class="panel panel-default"><div class="panel-body text-left">';
+echo '<ul class="list-group list-group-boxen text-left">';
 $resultID = db_query($query);
 while ($row = db_fetch_assoc($resultID)) {
 	$row['date'] = date('d.m.y - H:i',$row['time']);
 	$row['page'] = ceil ( ($row['rep']+1)  / $allgAr['Fpanz'] );
 	$row['ORD']  = forum_get_ordner($row['time'],$row['id'],$row['fid']);
 	
-	echo '<div class="lastbox"><small>'.$row['kat'].'</small><br><i class="fa fa-angle-double-right"></i> <a href="?forum-showposts-'.$row['id'].'-p'.$row['page'].'#'.$row['pid'].'">'.$row['name'].'</a><br>
-<small>Last Post:&nbsp;'.$row['last'].' | '.$row['date'].' Uhr</small></div>';
+	echo '<a href="?forum-showposts-'.$row['id'].'-p'.$row['page'].'#'.$row['pid'].'" class="list-group-item"><p class="text-muted">Kategorie: '.$row['kat'].'</p><h4><i class="fa fa-angle-double-right"></i> '.$row['name'].'</h4><p class="text-muted">
+Last Post:&nbsp;'.$row['last'].' | '.$row['date'].' Uhr</p><a>';
 
 }
-echo '</div></div>';
+echo '</ul>';
 ?>
 
 
