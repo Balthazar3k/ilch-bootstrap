@@ -29,7 +29,7 @@ while ($row = db_fetch_assoc($resultID)) {
 	$row['ORD']  = forum_get_ordner($row['time'],$row['id'],$row['fid']);
 	
 	echo '<a href="?forum-showposts-'.$row['id'].'-p'.$row['page'].'#'.$row['pid'].'" class="list-group-item"><p class="text-muted">Kategorie: '.$row['kat'].'</p><h4><i class="fa fa-angle-double-right"></i> '.$row['name'].'</h4><p class="text-muted">
-Last Post:&nbsp;'.$row['last'].' | '.$row['date'].' Uhr</p><a>';
+Last Post:&nbsp;'.$row['last'].' | '.$row['date'].' Uhr</p></a>';
 
 }
 echo '</ul>';
