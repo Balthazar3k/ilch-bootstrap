@@ -33,7 +33,12 @@ Last Post:&nbsp;'.$row['last'].' | '.$row['date'].' Uhr</p></a>';
 
 }
 echo '</ul>';
+
 ?>
+
+
+
+
 
 
 

@@ -3,6 +3,9 @@
 // Support www.ilch.de
 defined ('main') or die ('no direct access');
 
+$datum=date("j.n.Y");
+$zeit=date(" H:i ");
+
 if (loggedin()) {
     $shoutbox_VALUE_name = $_SESSION['authname'];
 } else {
@@ -16,7 +19,7 @@ if (has_right($allgAr['sb_recht'])) {
         $shoutbox_textarea = preg_replace("/\[.?(url|b|i|u|img|code|quote)[^\]]*?\]/i", "", $shoutbox_textarea);
         $shoutbox_textarea = strip_tags($shoutbox_textarea);
         if (!empty($shoutbox_nickname) AND !empty($shoutbox_textarea)) {
-            db_query('INSERT INTO `prefix_shoutbox` (`nickname`,`textarea`) VALUES ( "' . $shoutbox_nickname . '" , "' . $shoutbox_textarea . '" ) ');
+            db_query('INSERT INTO `prefix_shoutbox` (`nickname`,`textarea`) VALUES ( "' . $shoutbox_nickname . '<br><p>'.$datum.' | '.$zeit.' Uhr</p>" , "' . $shoutbox_textarea . '" ) ');
             header('Location: index.php?' . $menu->get_complete());
         }
     }
@@ -33,10 +36,8 @@ if (has_right($allgAr['sb_recht'])) {
 }
 echo '<div class="panel panel-primary">';
 $erg = db_query('SELECT * FROM `prefix_shoutbox` ORDER BY id DESC LIMIT ' . (is_numeric($allgAr['sb_limit'])?$allgAr['sb_limit']:5));
-$class = 'Cnorm';
 while ($row = db_fetch_object($erg)) {
-    $class = ($class == 'Cmite' ? 'Cnorm' : 'Cmite');
-    echo '<div class="panel-heading"><h4 class="panel-title">'. $row->nickname .'</h4></div><div class="panel-body">'. preg_replace('/([^\s]{' . $allgAr['sb_maxwordlength'] . '})(?=[^\s])/', "$1\n", $row->textarea) .'</div>';
+    echo '<div class="panel-heading"><h4 class="panel-title shoutbox-time">'. $row->nickname .'</h4></div><div class="panel-body">'. preg_replace('/([^\s]{' . $allgAr['sb_maxwordlength'] . '})(?=[^\s])/', "$1\n", $row->textarea) .'</div>';
 }
 echo '</div><span style="float:right;"><br><a  class="btn btn-primary btn-sm" href="index.php?shoutbox">'. $lang['archiv'] .'</a></span>';
 

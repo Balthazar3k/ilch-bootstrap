@@ -32,7 +32,7 @@ if ( loggedin() ) {
 	if (empty($_POST['login_pw'])) { $_POST['login_pw'] = 'Passwort'; }
 	$regist = '';
 	if ( $allgAr['forum_regist'] == 1 ) {
-	  $regist = ' &nbsp;&nbsp;<a href="index.php?user-regist" rel="tooltip" title="Account erstellen">Regist.</a>';
+	  $regist = ' &nbsp;&nbsp;<a href="index.php?user-regist" rel="tooltip" title="Account erstellen">Regist.</a>&nbsp;<a href="index.php?user-remind" rel="tooltip" title="Passwort vergessen?">Passw. lost?</a>';
 	}
 	$tpl->set_ar_out ( array ( 'regist' => $regist, 'wdlink' => '?'.$allgAr['smodul'], 'PASS' => $_POST['login_pw'], 'NAME' => $_POST['login_name'] ) , 1 );
 }

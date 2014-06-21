@@ -3,8 +3,8 @@
 	$.fn.UItoTop = function(options) {
 
  		var defaults = {			
-  			autoLinkPos: 'toTop-center', //toTop-left, toTop-center
-			autoLinkClass: 'btn btn-large btn-default', // example:'badge badge-warning' 'btn btn-large btn-danger'
+  			autoLinkPos: 'toTop-right', //toTop-left, toTop-center
+			autoLinkClass: 'btn btn-large btn-danger', // example:'badge badge-warning' 'btn btn-large btn-danger'
 			autoLinkText: 'nach oben', //Linktext, optional wenn Icon vorhanden
 			autoLinkIcon: 'icon-chevron-up icon-white', //Bootstrap Icon, optional wenn Text vorhanden
 			easingType: 'easeOutBounce',  //default without Easing: 'linear' or 'swing'		
@@ -26,7 +26,7 @@
 		})
 		
 		// Auto Link
-		$('body').append('<a  href="#" id="'+settings.autoLinkPos+'" class="'+settings.autoLinkClass+'"><i class="'+settings.autoLinkIcon+'"></i> '+settings.autoLinkText+'</a>');
+		$('body').append('<a href="#" id="'+settings.autoLinkPos+'" class="'+settings.autoLinkClass+'"><i class="'+settings.autoLinkIcon+'"></i> '+settings.autoLinkText+'</a>');
 		$(containerIDhash).hide().click(function(){
 			$('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
 			return false;

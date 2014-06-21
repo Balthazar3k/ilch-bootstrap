@@ -13,7 +13,7 @@ if ( empty($_POST['NEWSLETTER'])  ) {
   <form action="index.php" method="POST" class="form-inline" role="form">
 
 
- <div class="form-group">
+ <div class="form-group" style="margin-bottom:4px;">
     <label class="sr-only" for="nlemail">Email-Adresse</label>
     <input type="email" class="form-control" id="nlemail" placeholder="Email-Adresse">
   </div>

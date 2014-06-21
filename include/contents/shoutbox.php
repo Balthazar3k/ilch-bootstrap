@@ -44,7 +44,7 @@ while ($row = db_fetch_assoc($erg) ) {
   if ( is_siteadmin() ) {
 	  echo '<a href="index.php?shoutbox-d'.$row['id'].'" rel="tooltip" title="'.$lang['delete'].'"><i class="fa fa-trash-o"></i></a>&nbsp;';
 	}
-	echo '<b>'.$row['nickname'].' :</b> <small>'.preg_replace( '/([^\s]{'.$allgAr['sb_maxwordlength'].'})(?=[^\s])/', "$1\n", $row['textarea']).'</small></td></tr>';
+	echo '<b>'.$row['nickname'].' </b> <small>'.preg_replace( '/([^\s]{'.$allgAr['sb_maxwordlength'].'})(?=[^\s])/', "$1\n", $row['textarea']).'</small></td></tr>';
 }
 echo '</table>';
 if (is_siteadmin()) {

@@ -1,0 +1,54 @@
+
+<div class="panel panel-default text-center">
+  <div class="panel-body">
+    <h4>Hallo {NAME}</h4>
+{AVATAR}<br><br>
+<a href="index.php?user-8">Profil editieren</a><br>
+<a href="index.php?forum-privmsg">{NACHRICHTEN}</a><br>
+<a href="?search-aeit">Meine Beitr&auml;ge ({POSTS})</a><br>
+<a href="index.php?forum-augt">Neue Beitr&auml;ge <span style="color:#007F0E;">({LPOSTS})</span></a><br>
+{UGALLERY}
+<hr>
+<a href="index.php?user-3"><strong>Logout</strong></a><br>
+{ADMIN}
+  </div>
+</div>
+
+{EXPLODE}
+<div style="width:100%;text-align:center;">
+<button rel="tooltip" title="Anmelden" class="btn btn-primary btn-lg" style="width:90%;text-align:center;margin-top:5px;margin-bottom:5px;"  data-toggle="modal" data-target=".bs-example-modal">Anmelden</button>
+
+<div class="modal fade bs-example-modal" tabindex="-1" role="dialog" aria-labelledby="ilchlogin" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Anmelden</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:1em">
+<form method="POST" class="form-horizontal"  role="form">
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+  <input type="text" name="name" onFocus="if (value == '{NAME}') {value = ''}" onBlur="if (value == '') {value = '{NAME}'}" value="{NAME}" class="form-control">
+</div>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+  <input type="password" name="pass" onFocus="if (value == '{PASS}') {value = ''}" onBlur="if (value == '') {value = '{PASS}'}" value="{PASS}" class="form-control">
+</div>
+<input type="hidden" name="wdlink" value="{wdlink}" />
+<div style="float:left;">
+<input class="btn btn-primary" type="submit" name="user_login_sub" value="Login"><span style="margin-left:6px;margin-top:3px;">{regist}</span>
+</div>
+</form>
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+

@@ -10,21 +10,28 @@
 </script>
 
 <script type="text/javascript" src="include/includes/js/bbcode.js"></script>
-<form action="index.php?forum-privmsg-new" method="POST" name="form">
+<form action="index.php?forum-privmsg-new" method="POST" name="form" class="form-horizontal" role="form">
 <br>
 <table width="100%" class="table"><tr><td width="70%" class="text-left">
 <a class="btn btn-primary btn-xs" href="index.php?forum-privmsg">Eingang</a> <a class="btn btn-primary btn-xs" href="index.php?forum-privmsg-showsend">Ausgang</a></td><td width="30%" class="text-right">
 <a class="btn btn-primary btn-xs" href="index.php?forum-privmsg-new">PM schreiben</a></span></td></tr></table>
  
+
 <table width="100%" class="table table-bordered table-hover">
   <tr class="active">
 	  <legend>{_lang_writenewmessage}</legend>
 <tr>
-		<td><input name="name" value="{name}" class="form-control" placeholder="Empfänger Name"/>  <a href="index.php?search-finduser" target="_blank" rel="tooltip" title="Username finden" onClick="return finduser();">User finden</a>
-<br>
-<input type="text" tabindex="2" maxlength="50" size="40" name="bet" value="{BET}" class="form-control" placeholder="Betreff"></td>
-	</tr></table>
-    <table class="table  table-bordered table-hover table-striped">
+		<td>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <a class="btn btn-primary"  href="index.php?search-finduser" onClick="return finduser();">User finden</a>
+      </span>
+      <input name="name" value="{name}" class="form-control" placeholder="Empfänger Name">
+</div>
+<input type="text" tabindex="2" maxlength="50"  name="bet" value="{BET}"  class="form-control" placeholder="Betreff">
+
+</tr></table>
+<table class="table  table-bordered table-hover table-striped">
 <tr>
   <td width="15%" class="active hidden-xsmin" valign="top">{SMILIES}</td>
         <td width="85%">
@@ -35,5 +42,7 @@
       </tr>
     </table>
 </form>
+
+
 
 

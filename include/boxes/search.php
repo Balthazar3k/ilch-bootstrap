@@ -6,6 +6,7 @@
 defined ('main') or die ( 'no direct access' );
 
 $suchtpl = <<<HTML
+<div style="width: 100%;padding-left:10%;padding-right:10%;">
 <form action="index.php?search" method="GET" role="form">
 <div class="input-group">
       <input type="text" value="{search}" name="search" size="{size}" class="form-control" placeholder="Was suchst du?"><input type="hidden" name="in" value="2" />
@@ -14,7 +15,7 @@ $suchtpl = <<<HTML
       </span>
     </div>
 </form>
-<div class="text-right"><small><a href="index.php?search">{_lang_exsearch}</a></small></div>
+<div class="text-right"><small><a href="index.php?search">{_lang_exsearch}</a></small></div></div>
 HTML;
 
 $tpl = new tpl ($suchtpl,3);
