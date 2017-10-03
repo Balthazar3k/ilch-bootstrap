@@ -21,10 +21,10 @@ function doVote(n1,did) {
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-        <h4 class="modal-title">{_lang_voting}</h4>
+        <h4 class="modal-title">{_lang_voting}: {name} <small>{version}</small></h4>
       </div>
       <div class="modal-body text-center">
-        <p>
+
 {_lang_voting} <span class="badge">{vote_wertung}</span> von <span class="badge">10</span><br>
 <ul class="pagination pagination-sm">
   <li><a href="#" onClick="doVote(1,{id})" style="cursor:pointer">1</a></li>
@@ -39,7 +39,7 @@ function doVote(n1,did) {
   <li><a href="#" onClick="doVote(10,{id})" style="cursor:pointer">10</a></li>
 </ul><br>
 {_lang_voter} <span class="badge">{vote_klicks}</span><br>
-</p>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Schlieﬂen</button>
@@ -71,6 +71,7 @@ function doVote(n1,did) {
   <tr>
 	  <th class="active">{_lang_desc}</th>
   </tr>
+<tr>
 		<td>{ssurl}{descl}</td>
 	</tr>
 </table>

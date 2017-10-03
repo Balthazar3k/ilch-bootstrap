@@ -1,7 +1,7 @@
   <table width="100%">
 	  <tr>
 		  <td width="50%" class="text-left">
-			  <span class="btn btn-primary">{_lang_entries} <span class="badge">{EINTRAGE}</span>
+			  <span class="btn btn-primary">{_lang_entries} <span class="badge">{EINTRAGE}</span></span>
 			</td>
 		  <td width="50%" class="text-right">
 			  <a class="btn btn-primary" href="index.php?gbook-1">{_lang_insert}</a>
@@ -101,15 +101,15 @@ function RestlicheZeichenErmitteln(d)
   <tr><td>
 <div class="input-group">
   <span class="input-group-addon"><i class="fa fa-male"></i></span>
-  <input type="text" value="{uname}" tabindex="1" name="name" class="form-control" placeholder="Name">
+  <input type="text" value="{uname}" tabindex="1" name="name" class="form-control" placeholder="Name" disabled>
 </div>
 <div class="input-group">
   <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-  <input type="text" name="mail"  tabindex="2" class="form-control" placeholder="E-Mail">
+  <input type="text" name="mail"  tabindex="2" class="form-control" placeholder="E-Mail" disabled>
 </div>
 <div class="input-group">
   <span class="input-group-addon"><i class="fa fa-home"></i></span>
-  <input type="text" name="page" tabindex="3" class="form-control" placeholder="Webseite">
+  <input type="text" name="page" tabindex="3" class="form-control" placeholder="Webseite" disabled>
 </div>
 </td>
 	</tr></table>
@@ -119,12 +119,12 @@ function RestlicheZeichenErmitteln(d)
         <td width="85%">
       <!-- BB Code START -->{__BBCodeButtons__}<!-- BB Code START -->
 <br>
-  <textarea class="form-control" placeholder="Dein Eintrag" onblur="RestlicheZeichenErmitteln(this);" onchange="RestlicheZeichenErmitteln(this);" onfocus="RestlicheZeichenErmitteln(this);" onkeydown="RestlicheZeichenErmitteln(this);" onkeyup="RestlicheZeichenErmitteln(this);" cols="50" rows="10" tabindex="4" name="txt"></textarea><br>Noch <input size="3" name="Laenge" value="{TXTL}"> {_lang_signs}
+  <textarea class="form-control" placeholder="Dein Eintrag" onblur="RestlicheZeichenErmitteln(this);" onchange="RestlicheZeichenErmitteln(this);" onfocus="RestlicheZeichenErmitteln(this);" onkeydown="RestlicheZeichenErmitteln(this);" onkeyup="RestlicheZeichenErmitteln(this);" cols="50" rows="10" tabindex="4" name="txt" disabled></textarea><br>Noch <input size="3" name="Laenge" value="{TXTL}"> {_lang_signs}
 </td>
       </tr>
     </table></td>
 	</tr>{ANTISPAM}<tr>
-  <td></td><td><input type="submit" class="btn btn-primary" value="{_lang_formsub}" tabindex="5" accesskey="s"></td>
+  <td></td><td><input type="submit" class="btn btn-primary" value="{_lang_formsub}" tabindex="5" accesskey="s" disabled></td>
 	</tr></table></form>
 
 {EXPLODE}
@@ -156,9 +156,9 @@ function RestlicheZeichenErmitteln(d)
           <legend>{_lang_writecomment}</legend>
 <div class="row">
   <div class="col-lg-4">
-          <input type="text" class="form-control" name="name" value="{uname}" readonly> &nbsp; {ANTISPAM} &nbsp;</div></div>
-          <textarea class="form-control" rows="3" name="text" placeholder="Kommentar eingeben"></textarea><br>
-          <input type="submit" class="btn btn-primary text-left" value="{_lang_enter}">
+          <input type="text" class="form-control" name="name" value="{uname}" disabled> &nbsp; {ANTISPAM} &nbsp;</div></div>
+          <textarea class="form-control" rows="3" name="text" placeholder="Kommentar eingeben" disabled></textarea><br>
+          <input type="submit" class="btn btn-primary text-left" value="{_lang_enter}" disabled>
         </fieldset>
       </form>
       <br />

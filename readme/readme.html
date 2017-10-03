@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="ISO 8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://www.maretz.eu/icon.ico">
+
+    <title>Anleitung Ilch meets Bootstrap</title>
+
+    <!-- Bootstrap-CSS -->
+    <link href="http://holdirbootstrap.de/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://holdirbootstrap.de/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+
+    <!-- Unterstützung für Media Queries und HTML5-Elemente im Internet Explorer über HTML5 shim und Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css" media="screen">
+.panel {overflow-x:auto;overflow-y:hidden;background-color:#FFF8DD;color:#383838;font-family:Courier, monospace;font-size:11px;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition-duration:all .3s ease-in-out;transition:all .3s ease-in-out;}
+.panel:hover {background-color:#333;color:#fff;-webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.46);
+-moz-box-shadow:    5px 5px 7px 0px rgba(0, 0, 0, 0.46);
+box-shadow:         5px 5px 7px 0px rgba(0, 0, 0, 0.46);}
+.alert { -webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition-duration:all .3s ease-in-out;transition:all .3s ease-in-out;}
+.alert:hover {-webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.46);
+-moz-box-shadow:    5px 5px 7px 0px rgba(0, 0, 0, 0.46);
+box-shadow:         5px 5px 7px 0px rgba(0, 0, 0, 0.46);}
+</style>
+<script type="text/javascript">
+function selecttxt(objId) {
+if (document.selection) {
+var range = document.body.createTextRange();
+range.moveToElementText(document.getElementById(objId));
+range.select();
+}
+else if (window.getSelection) {
+var range = document.createRange();
+range.selectNode(document.getElementById(objId));
+window.getSelection().addRange(range);
+}
+}
+</script>
+  </head>
+  <body>
+
+ <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="readme.html">Readme</a></li>
+          <li><a href="readme1.html">mar_bootstrap_1</a></li>
+          <li><a href="readme2.html">mar_bootstrap_2</a></li>
+        </ul>
+<h3 class="text-muted">Ilch meets Bootsrap</h3>
+      </div>
+
+      <div class="jumbotron" style="text-align:left;padding:20px;border: 1px solid #999;">
+        <div class="alert alert-danger"><h3>Voraussetzung</h3>
+   Es sollte die Ilch Clan version 1.1p installiert sein, sowie BBcode 2.0 für Ilch 1.1p.<br>
+   Erst im Anschluss diese Erweiterung aufladen und bestehende Dateien ersetzen.Das überspielen dieser Erweiterung auf eine bestehende Version mit ggf. installierten Modulen kann zu Fehlern führen.
+<br>Eine Ilch 1.1p Version nur mit bbcode 2.0 wird empfohlen.<br>Bei aufkommenden Fehlern übernehme ich keine Haftung!Vorher ein Backup der Seite erstellen!</div>
+    <h3>Installation</h3>
+Alle Dateien aus dem Ordner upload nach include aufladen und bestehende Dateien ersetzen.<br>
+Ggf. Backup der Seite vorher erstellen.
+<h3>Eigenes Design erstellen</h3>
+Mit Hilfe der Anleitungen auf <a href="http://holdirbootstrap.de/los-gehts/">Bootstrap</a> kannst du dir ein individuelles Design erstellen.<br>
+Die benötigten Dateien sind bereits vorhanden und müssen nur in der index.htm eingetragen werden:<br><br>
+<div class="panel panel-default">
+  <div class="panel-body" id="s1" style="white-space: nowrap;">
+
+    &lt;link href="include/bootstrap/ekko-lightbox.css" rel="stylesheet"&gt;<br>
+    &lt;link href="include/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet"&gt;<br>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="include/bootstrap/js/bootstrap.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="include/bootstrap/js/bootstrap.file-input.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="include/bootstrap/js/ekko-lightbox.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="include/bootstrap/js/bootstrap-popover.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="include/bootstrap/js/bootstrap-tooltip.js"&gt;&lt;/script&gt;
+
+</div>
+<span style="float:right;">
+<a class="btn btn-default btn-xs" style="font-size:9px;font-family:Arial;padding:4px;" href="" onclick="selecttxt('s1'); return false;">markieren</a>
+</span>
+</div>
+
+Auch befindet sich die bootstrap.css bereits an Board.Du kannst diese in die index.htm vom Design eintragen und die Änderungen über die style.css definieren oder dir eine Eigene in den Designordner legen.
+<br><br>
+<div class="panel panel-default">
+  <div class="panel-body" id="s2" style="white-space: nowrap;">
+    &lt;link href="include/bootstrap/bootstrap.css" rel="stylesheet"&gt;
+</div>
+<span style="float:right;">
+<a class="btn btn-default btn-xs" style="font-size:9px;font-family:Arial;padding:4px;" href="" onclick="selecttxt('s2'); return false;">markieren</a>
+</span>
+</div>
+Bei Fragen kontaktiere einfach den Supportbereich auf Maretz.eu.
+<h3>Modul Anpassung</h3>
+Es werden im weiteren Verlauf Module zu Ilch 1.1p an die Bootstrap Version angepasst.<br>
+Auch kannst du unter Anfrage auf Maretz.eu ein Modul zur Anpassung vorschlagen.<br>
+<br>
+<strong>Weitere Modul Anpassungen externe Quellen:</strong>
+<br><br>
+<ul>
+  <li><a href="https://github.com/H0walD/Bootstrap_Erweitertes_mod_PMSystem/archive/master.zip">Erweitertes_mod_PMSystem</a></li>
+ <li><a href="https://github.com/Maretz/linkus11P-ilch_bootstrap/archive/master.zip">LinkUs 11P</a></li>
+</ul>
+<br>
+Weitere Module werden dieser Liste hier hinzugefügt.<br>
+Als weiteren Zusatz findest du eine Special Login Box im Ordner extra.Anmelde Button wie auf der Demoseite.Avataranzeige,sowie erweiterte Info´s zum eigenen Account.<br>
+
+
+
+</div>
+
+
+
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Responsiv</h4>
+          <p>Optimierte Nutzung auf den modernen Endgeräten, wie PC, Tablet und Smartphone.</p>
+
+          <h4>Bootstrap</h4>
+          <p>Mit Hilfe von <a href="http://holdirbootstrap.de/los-gehts/">Bootstrap</a> kannst du dir ein individuelles Design erstellen und mit dem Ilch CMS nutzen.</p>
+
+          <h4>Erweiterung</h4>
+          <p>Im Zuge der Umstellungen wurden einige Bereiche erweitert.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>ILch 2.0</h4>
+          <p>Die Templates können auch an das kommende Ilch 2.0 angepasst werden mit wenigen Änderungen.</p>
+
+          <h4>Module</h4>
+          <p>Module können auf Anfrage an diese Version angepasst werden.</p>
+
+          <h4>Ilch 1.1 Backend</h4>
+          <p>In naher Zukunft wird es auch eine passende Version für den Adminbereich des CMS geben.Aktuelle Info´s zum Stand werden auf Maretz.eu bekannt gegeben.</p>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+<div style="float:right;margin:5px;"><a id="521006" href="http://www.besucherzaehler-html.de">Besucherzähler</a><script type="text/javascript" language="JavaScript" src="http://www.besucherzaehler-html.de/counter_js.php?account=521006&style=29"></script></div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ilch-bootstrap.de/include/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
